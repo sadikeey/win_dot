@@ -1,0 +1,215 @@
+vim .zshenv
+ls
+rm -rf .zshrc .zsh_history
+ls
+ls
+rm .zcompdump
+ls
+cd win_dot
+ls
+rm -rf .zshenv.swp
+ls
+touch .gitignore
+ls
+vim .gitignore
+cd
+ls
+cd win_dot
+s
+ls
+cd
+cd win_dot
+ls
+ls
+git add -A
+git commit -m "adding zshrc"
+git push
+cd
+ls
+cd .config
+ls
+ls
+cd
+cd .config/zsh
+ls
+cd plugins
+ls
+cd ..
+ls
+vim .zshrc
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/powerlevel10k\
+echo 'source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme' >>~/.config/zsh/.zshrc
+ls
+zsh
+ls
+cd
+cd win_dot
+ls
+cd .config
+ls
+cd zsh
+ls
+ls
+ls -lah
+vim zsh-history
+sudo apt install neovim
+sudo nala install neovim
+vim zsh-history
+l
+ls
+ls -lah
+vim .zshrc
+ls
+zsh
+cd zsh
+zsh
+ls
+cd .config/zsh
+ls
+vim .zshrc
+ni exa
+exit
+cd win_dot
+ls
+vim .gitignore
+cd
+vim .config/zsh/.zshrc
+zsh
+exit
+ls
+ls
+cd powerlevel10k
+ls
+rm .git
+rm -rf .git
+ls
+vim .git
+vim .gitignore
+cd
+exit
+exit
+ls
+vim .zshrc
+zsh
+exit
+cd .config/zsh/
+vim .zshrc
+zsh
+exit
+ls
+sudo nala uninstall vim
+sudo nala remove vim
+ls
+rm .viminfo
+ls
+rm .zsh_history
+ls
+exit
+ls
+exit
+cd .config/zsh
+vim .zshrc
+exit
+ls
+exit
+exa --icons --group-directories-first -l
+exa --icons --group-directories-first -la
+exa --icons --group-directories-first -lah
+exa --icons --group-directories-first -ah
+vim .config/zsh/.zshrc
+zsh
+exit
+ni starship
+vim .config/zsh/.zshrc
+snap install starship
+sudo snap install starship
+exit
+ls
+exit
+sudo apt-get install build-essential procps curl file git
+ni build-essential procps curl file git
+exit
+cd .config/zsh
+ls
+cd plugins
+ls
+cd
+exit
+curl -sS https://starship.rs/install.sh | sh
+cd .config/zsh
+sl
+ls
+vim .zshrc
+ls
+cd ..
+ls
+ls
+ls -lah
+cd
+ls
+cd .config
+ls
+touch starship.toml
+vim starship.toml
+exit
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+cd
+vim .zshenv
+exit
+ls
+ls
+cd /home/linuxbrew
+ls
+cd .linuxbrew
+ls
+exit
+brew search node
+brew npm
+brew search npm
+exit
+cd
+cd .config/zsh
+ls
+vim .zshrc
+ls
+rm zsh-history
+ls
+vim .zshrc
+exit
+ls
+exit
+ls
+p10k configure
+exit
+ls
+p10k configure
+sudo nala update
+brew install node
+exit
+sudo nala update
+sudo nala upgrade
+node --version
+npm --version
+cd
+mkdir Projects
+cd Projects
+npx create-react-app sadik.github.io
+cd sadik.github.io
+npm start
+ls
+vim .gitignore
+git init
+git add .
+git commit -m "my initial commit"
+exit
+cd /mnt/c/Users/sadik/Downloads
+ls
+git clone https://github.com/Sycnex/Windows10Debloater.git
+exit
+winget.exe search whatsapp
+wingets whatsapp
+vim .config/zsh/.zshrc
+zsh
+winget search whatsapp
+vim .config/zsh/.zshrc
+zsh

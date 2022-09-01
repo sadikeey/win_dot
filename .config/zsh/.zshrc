@@ -1,10 +1,13 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+
 #	 _______| |__  _ __ ___
 #	|_  / __| '_ \| '__/ __|
 #	 / /\__ \ | | | | | (__
 #	/___|___/_| |_|_|  \___|
 
 ########### Function for plugins ###########
-#
 function zsh_add_file() {
     [ -f "$ZDOTDIR/$1" ] && source "$ZDOTDIR/$1"
 }
@@ -40,7 +43,7 @@ _comp_options+=(globdots)		# Include hidden files.
 # History in cache directory:
 HISTSIZE=1000000
 SAVEHIST=1000000
-HISTFILE=$ZDOTDIR/zsh-history
+HISTFILE=$ZDOTDIR/.history
 
 #For Extracting Files
 ex ()
@@ -71,32 +74,18 @@ autoload -U colors && colors	# Load colors
 # PROMPT="%n@%m %~ %# "
 PROMPT="%n@%m %~ $ "
 
-#Powerlevel10k
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
-
-#source $HOME/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
-#source ~/.config/zsh/.p10k.zsh
+# Powelevel 10k
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.config/zsh/.p10k.zsh
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
-# Fetching programms
-#neofetch --ascii_distro gentoo 
-#neofetch
-#colorscript random
-
-########### Aliases ###########
-alias vim='nvim'
-alias vi='nvim'
-alias v='nvim'
-alias svim='sudo nvim'
-alias grep='grep --color=auto'
-#alias ls='exa -al --color=always --group-directories-first'
-alias ls='ls -lah --color=auto'
+#eval "$(starship init zsh)"
 
 
-########### Vi Mode ###########
+########### Vi Mode & Keymaps###########
 
 bindkey -v
 export KEYTIMEOUT=1
@@ -125,6 +114,15 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-
-########### Basic Keybindings ###########
 bindkey -s '^o' 'ranger^M'
+
+########### Aliases ###########
+alias vim='nvim'
+alias vi='nvim'
+alias v='nvim'
+alias svim='sudo nvim'
+alias grep='grep --color=auto'
+alias ls='exa -ah --color=always --icons --group-directories-first'
+alias ni='sudo nala install'
+alias wingets='winget.exe search'
+alias wingeti='winget.exe install'
